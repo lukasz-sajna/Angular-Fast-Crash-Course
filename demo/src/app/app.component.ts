@@ -7,8 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+  firstName = 'Łukasz';
+  lastName = 'Sajna';
+  city = 'Wrocław';
 
   constructor() {
     console.log('constructor...');
+  }
+
+  displayFirstName() {
+    return this.firstName;
   }
 }
