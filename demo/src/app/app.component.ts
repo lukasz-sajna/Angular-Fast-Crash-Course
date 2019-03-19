@@ -11,11 +11,17 @@ export class AppComponent {
   lastName = 'Sajna';
   city = 'Wrocław';
 
+  status: boolean;
+
   constructor() {
     console.log('constructor...');
   }
 
   displayFirstName() {
     return this.firstName;
+  }
+
+  getUserStatus() {
+    return this.status = true;
   }
 }
