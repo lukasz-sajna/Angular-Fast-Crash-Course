@@ -15,6 +15,8 @@ export class AppComponent {
 
   constructor() {
     console.log('constructor...');
+
+    this.getUserStatus();
   }
 
   displayFirstName() {
@@ -22,6 +24,18 @@ export class AppComponent {
   }
 
   getUserStatus() {
-    return this.status = true;
+    return this.status = false;
+  }
+
+  greetPerson() {
+    alert('HI!');
+  }
+
+  mousingOver() {
+    console.log('we just moused over');
+  }
+
+  keyDowning() {
+    console.log('we just key downed');
   }
 }
