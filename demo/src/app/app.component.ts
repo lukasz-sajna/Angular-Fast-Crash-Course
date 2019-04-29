@@ -46,4 +46,8 @@ export class AppComponent {
   keyDowning() {
     console.log('we just key downed');
   }
+
+  onSubmit() {
+    console.log('You just submitted form');
+  }
 }
