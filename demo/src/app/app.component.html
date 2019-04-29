@@ -1,4 +1,26 @@
-<label for="status">Active</label>
+<h1 [ngStyle]="{'color': status ? 'green' : 'red'}" > {{firstName}}</h1>
+
+<br>
+
+<h1 [ngClass]="{'isActive': status}">{{lastName}}</h1>
+
+<!-- <ul>
+    <li *ngFor="let post of posts; let i=index">{{i + 1}} {{post.title}}</li>
+</ul> -->
+
+
+
+<!-- <h1 *ngIf="status; else notActive">{{ firstName }}</h1>
+
+<ng-template #notActive>
+
+<p>Not active</p>
+
+</ng-template> -->
+
+
+
+<!-- <label for="status">Active</label>
 <input type="radio" id="status" ng-checked="status">
 
 <p>{{ getUserStatus() }}</p>
@@ -19,7 +41,7 @@
 <br>
 <hr>
 
-<input type="text">
+<input type="text"> -->
 <!-- <h1>Welcome to {{ firstName }} {{lastName}}!</h1>
 <br>
 <hr>

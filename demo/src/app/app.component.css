@@ -5,3 +5,7 @@ div.box {
   background: black;
   cursor: pointer;
 }
+
+.isActive {
+ color: green;
+}

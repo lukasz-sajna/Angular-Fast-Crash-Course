@@ -8,15 +8,23 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'demo';
   firstName = 'Łukasz';
-  lastName = 'Sajna';
+  lastName: string;
   city = 'Wrocław';
-
   status: boolean;
+  posts: object[];
 
   constructor() {
     console.log('constructor...');
-
+    this.lastName = 'Sajna';
     this.getUserStatus();
+
+    this.posts = [
+      { title: 'Post 1' },
+      { title: 'Post 2' },
+      { title: 'Post 3' },
+      { title: 'Post 4' },
+      { title: 'Post 5' },
+    ];
   }
 
   displayFirstName() {
