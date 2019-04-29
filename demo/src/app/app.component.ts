@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,11 @@ export class AppComponent {
   city = 'Wrocław';
   status: boolean;
   posts: object[];
+
+  user = {
+    username: '',
+    password: ''
+  };
 
   constructor() {
     console.log('constructor...');
@@ -47,7 +53,9 @@ export class AppComponent {
     console.log('we just key downed');
   }
 
-  onSubmit() {
-    console.log('You just submitted form');
+  onSubmit(theForm: NgForm) {
+    this.user.username = theForm.value.username;
+    this.user.password = theForm.value.password;
+    console.log(this.user);
   }
 }
