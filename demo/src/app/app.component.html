@@ -1,20 +1,27 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active">Home <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact</a>
+            </li>
+        </ul>
     </div>
 </nav>
 
 <div class="container">
-<form (submit)="onSubmit(theForm)" #theForm="ngForm">
+    <router-outlet></router-outlet>
+
+    <!-- <form (submit)="onSubmit(theForm)" #theForm="ngForm">
     <div class="form-group">
         <label for="username">User name</label>
         <input ngModel name="username" type="text" id="username" class="form-control" placeholder="Enter Username">
@@ -25,7 +32,7 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> -->
 </div>
 
 
